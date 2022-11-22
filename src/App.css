@@ -137,11 +137,11 @@ body {
 h1 {
   font-size: 3rem;
 }
-h2 {
+p {
   font-size: 2rem;
 }
 h1,
-h2 {
+p {
   font-weight: 500;
   margin: 1rem 0;
   height: 50px;

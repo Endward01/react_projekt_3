@@ -1,0 +1,29 @@
+.loaderOuter {
+    top: 0;
+    width: 100vh;
+    height: 100vh;
+    position: absolute;
+    background: rgba(29, 29, 29, 0.85);
+    border-radius: 0.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .loaderInner {
+    background: rgba(29, 29, 29, 0.85);
+    border: 14px solid lightgray;
+    border-top: 14px solid #181818;
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    animation: spin 2s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(720deg);
+    }
+  }

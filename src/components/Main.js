@@ -6,14 +6,14 @@ import Select from "./Select";
 import { useEffect, useState } from "react";
 import { fetchExchangeRates } from "../services/fetchCurrenciesAPI";
 import Footer from "./Footer";
+import Loader from "./Loader";
 const Main = () => {
-
   // input
   const [amount, setAmount] = useState("");
   const inputAmount = (elem) => {
     setAmount(elem.target.value);
   };
-  
+
   // select
   const [items, setItems] = useState([]);
   const [loaded, setLoaded] = useState(false);
@@ -26,10 +26,10 @@ const Main = () => {
 
   // get mid of selected currency
   const [mid, setMid] = useState("");
-  const [midCode, setMidCode] = useState("ds")
+  const [midCode, setMidCode] = useState("ds");
   const handleChange = (elem) => {
     const value = elem.target.value;
-    setMidCode(value)
+    setMidCode(value);
     items.forEach((elem) => {
       if (elem.code === value) {
         setMid(elem.mid);
@@ -47,14 +47,14 @@ const Main = () => {
     setIsDone(true);
   };
 
-
   return (
     <main className={style.container}>
       <Header />
       <Input amount={amount} inputAmount={inputAmount} />
-      <Select list={items} loaded={loaded} handleChange={handleChange}/>
+      <Select list={items} loaded={loaded} handleChange={handleChange} />
       <Button showValue={showValue} />
       <Footer value={value} isDone={isDone} midCode={midCode} amount={amount} />
+      <Loader loaded={loaded}/>
     </main>
   );
 };
