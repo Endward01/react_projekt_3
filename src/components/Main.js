@@ -12,6 +12,7 @@ const Main = () => {
   const [amount, setAmount] = useState("");
   const inputAmount = (elem) => {
     setAmount(elem.target.value);
+    setIsDone(false);
   };
 
   // select
@@ -33,6 +34,7 @@ const Main = () => {
     items.forEach((elem) => {
       if (elem.code === value) {
         setMid(elem.mid);
+        setIsDone(false);
       }
     });
   };
@@ -54,7 +56,7 @@ const Main = () => {
       <Select list={items} loaded={loaded} handleChange={handleChange} />
       <Button showValue={showValue} />
       <Footer value={value} isDone={isDone} midCode={midCode} amount={amount} />
-      <Loader loaded={loaded}/>
+      <Loader loaded={loaded} />
     </main>
   );
 };
