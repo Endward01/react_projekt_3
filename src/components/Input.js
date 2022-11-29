@@ -1,4 +1,5 @@
 import { NumericFormat } from "react-number-format";
+
 const Input = ({ amount, inputAmount }) => {
   return (
     <NumericFormat

@@ -1,4 +1,5 @@
 import Options from "./Options";
+
 const Select = ({ list, loaded, handleChange }) => {
   return (
     <select onChange={handleChange}>

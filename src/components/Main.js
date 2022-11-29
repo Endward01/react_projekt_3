@@ -1,4 +1,4 @@
-import style from "../css/Main.module.css";
+import "./Main.css";
 import Button from "./Button";
 import Header from "./Header";
 import Input from "./Input";
@@ -7,6 +7,7 @@ import { useEffect, useState } from "react";
 import { fetchExchangeRates } from "../services/fetchCurrenciesAPI";
 import Footer from "./Footer";
 import Loader from "./Loader";
+
 const Main = () => {
   // input
   const [amount, setAmount] = useState("");
@@ -40,7 +41,6 @@ const Main = () => {
   };
 
   //count
-
   const [value, setValue] = useState(NaN);
   const [isDone, setIsDone] = useState(false);
   const showValue = () => {
@@ -50,7 +50,7 @@ const Main = () => {
   };
 
   return (
-    <main className={style.container}>
+    <main className="container">
       <Header />
       <Input amount={amount} inputAmount={inputAmount} />
       <Select list={items} loaded={loaded} handleChange={handleChange} />

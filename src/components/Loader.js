@@ -1,9 +1,10 @@
-import style from "../css/Loader.module.css";
+import "./Loader.css";
+
 const Loader = ({ loaded }) => {
   if (!loaded) {
     return (
-      <div class={style.loaderOuter}>
-        <div class={style.loaderInner}></div>
+      <div class="loaderOuter">
+        <div class="loaderInner"></div>
       </div>
     );
   }

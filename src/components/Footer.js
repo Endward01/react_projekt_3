@@ -1,12 +1,10 @@
 const Footer = ({ value, isDone, midCode, amount }) => {
-    if (!isDone) {
-        return <p></p>;
-    } else {
-        return (
-      <p>
-        {amount} {midCode} {"to"} {value} {"PLN"}
-      </p>
-    );
-  }
+  return isDone ? (
+    <p>
+      {amount} {midCode} {"to"} {value} {"PLN"}
+    </p>
+  ) : (
+    <p></p>
+  );
 };
 export default Footer;
